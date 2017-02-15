@@ -1,0 +1,34 @@
+{
+  "name": "s3-upload",
+  "description": "upload to s3",
+  "main": "server.js",
+  "authors": [
+    "nzhou026"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-route": "~1.6.0",
+    "angular-loader": "~1.5.0",
+    "angular-mocks": "~1.5.0",
+    "angular-ui-router": "~0.3.1",
+    "angular-ui-grid": "^4.0.2",
+    "angular-cookies": "1.2.11",
+    "angular-sanitize": "1.2.11",
+    "es5-shim": "~2.1.0",
+    "ng-file-upload": "~12.2.3",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "angular-crypto": "^0.0.3",
+    "aws-sdk": "aws-sdk-js#^2.10.0",
+    "evaporatejs":"2.0.8"
+  }
+}

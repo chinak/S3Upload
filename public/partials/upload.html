@@ -1,0 +1,81 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload</title>
+</head>
+<body>
+<div ng-init="uploadInit()" class="fade-in ng-scope">
+
+    &lt;!&ndash;<input type="button" value="test" ng-click="getS3Policy('timeinc-test3')">&ndash;&gt;
+    <div class="header">
+        <h3 class="text-muted">S3 File Upload</h3>
+    </div>
+
+    <div class="row marketing">
+        <div class="form-group">
+            <label for="photos">Input Picture</label>
+            <input id="photos" type="file" class="btn" ng-file-select="onFileSelect($files)" multiple>
+            <p class="help-block">Select pictures</p>
+            <div ng-repeat="file in files" class="container">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width:{{file.progress}}%;">
+                        {{file.name}} : {{file.progress}}
+                    </div>
+                </div>
+                <button class="btn btn-default" type="button" ng-click="abort($index)" ng-show="file.progress != 100">Abort</button>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="btn btn-default" ng-click="submit()" >Submit</button>
+
+    </div>
+
+</div>
+
+
+
+
+</body>
+</html>
+-->
+<div class="header">
+    <h3 class="text-muted">S3 File Upload</h3>
+</div>
+
+<!--<div class="jumbotron">
+    <h1>File Upload to s3</h1>
+    <p class="lead">
+        Basic app to show file uploads to S3 using angular, angular-file-upload, nodejs and aws-sdk
+    </p>
+</div>-->
+
+<div class="row marketing">
+    <div class="form-group">
+        <label>  Input Picture</label>
+        <div ngf-select  ngf-drop ng-model="file" class="drop-box" multiple>Click here to Upload</div><br>
+
+        </div>
+        <button class="btn btn-ttc" type="button" ng-click="singleUpload(file)">SingleUpload</button>
+        <button class="btn btn-ttc" type="button" ng-click="multiUpload(file)">MultiUpload</button>
+        </div>
+        <div  class="container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width:{{file.progress}}%;">
+                    {{file.name}} : {{file.progress}}
+                </div>
+
+            </div>
+            <div ng-show="file.progress!=null">Time Remaining: {{remainTime}}s</div>
+            <div ng-show="file.progress!=null">Speed: {{speed}}</div>
+            <br>
+            <button class="btn btn-ttc" type="button" ng-click="abort()">Abort</button>
+            <button class="btn btn-ttc" type="button" ng-click="pause()">Pause</button>
+            <button class="btn btn-ttc" type="button" ng-click="resume()">Resume</button>
+        </div>
+    </div>
+
+</div>
+
+
